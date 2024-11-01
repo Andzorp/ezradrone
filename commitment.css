@@ -1,0 +1,74 @@
+/* Parallax Section Styling */
+.parallax-commitment {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #e8ffe8; /* Light text color for contrast */
+}
+
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/contact-cta.jpg'); /* Replace with your chosen background */
+    background-attachment: fixed; /* Parallax Effect */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Place behind text */
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 1; /* Ensure text is above background */
+}
+
+.parallax-content h3 {
+    font-size: 2.5em;
+    color: #2ecc71; /* Accent color */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Floating Commitments */
+.commitment-item {
+    font-size: 1.4em;
+    margin: 5px 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark translucent background for readability */
+    padding: 10px 20px;
+    border-radius: 6px;
+    animation: floatUp 6s ease-in-out infinite; /* Floating animation */
+    opacity: 0.85;
+}
+
+/* Floating Animation */
+@keyframes floatUp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .parallax-commitment {
+        height: 300px;
+    }
+
+    .parallax-content h3 {
+        font-size: 2em;
+    }
+
+    .commitment-item {
+        font-size: 1.2em;
+    }
+}

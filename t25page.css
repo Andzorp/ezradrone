@@ -1,0 +1,135 @@
+/* Products Page Styles */
+.product {
+    max-width: 1400px;
+    margin: 200px auto; /* Reduced top/bottom margin */
+    padding: 10px 30px 30px; /* Reduced top padding */
+    background-color: #1f1f1f;
+    color: #e8ffe8;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Top Section: Image and Details */
+.product-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.drone-image {
+    flex: 2; /* Allocate more space to the image */
+    display: flex;
+    justify-content: center;
+}
+
+.drone-img {
+    margin: 0;
+    padding: 0;
+    align-self: flex-start; /* Ensures it aligns at the top */
+}
+
+.drone-img img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.drone-details {
+    flex: 1.4; /* Slightly reduce the space for details */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.drone-details h2 {
+    font-size: 2.5em;
+    color: #2ecc71;
+    margin-bottom: 15px;
+}
+
+.drone-details p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.product h2,
+.product p {
+    margin-top: 0;
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.product-top {
+    display: flex;
+    align-items: flex-start; /* Aligns children (image and text) at the top */
+    gap: 20px; /* Optional: add spacing between image and text */
+    margin-top: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons .btn {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: transparent;
+    color: #2ecc71;
+    border: 2px solid #2ecc71;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.action-buttons .btn:hover {
+    background-color: #2ecc71;
+    color: #1f1f1f;
+}
+
+/* Specifications Section */
+.specs-section {
+    margin-top: 110px;
+}
+
+.specs-section h3 {
+    font-size: 1.8em;
+    color: #2ecc71;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.specs-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.specs-section li {
+    font-size: 1.1em;
+    color: #cccccc;
+    padding: 8px 0;
+    border-bottom: 1px solid #333333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .drone-details {
+        align-items: center;
+        text-align: center;
+    }
+
+    .action-buttons {
+        justify-content: center;
+    }
+}

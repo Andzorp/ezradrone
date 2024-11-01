@@ -1,0 +1,187 @@
+/* How It Works Section */
+.how-it-works {
+    background-color: #1E1D1D;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 3em;
+    color: #1e7d1e;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.how-it-works h2::after {
+    content: '';
+    width: 120px;
+    height: 4px;
+    background-color: #1e7d1e;
+    display: block;
+    margin: 15px auto;
+}
+
+/* Steps Container */
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Step Card Styling */
+.step {
+    background: #1f1f1f;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%; /* Control width of each card */
+    min-width: 250px;
+    height: 300px; /* Increase height slightly */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Step Icon Styling */
+.step-icon {
+    font-size: 2em;
+    color: #1e7d1e;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Step Title and Description Alignment */
+.step h3 {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+    min-height: 3em; /* Ensures consistent spacing */
+    display: flex;
+    align-items: center;
+}
+
+.step p {
+    font-size: 1.1em;
+    color: #cccccc;
+    line-height: 1.6;
+    min-height: 6em; /* Consistent height for text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Hover Effect on Card */
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* FA Icon Styling without Circle */
+.step-icon i {
+    font-size: 2em;
+    color: #228B22; /* Default color */
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Hover Effect on Icon */
+.step:hover .step-icon {
+    color: #1e7d1e;
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+    .step {
+        width: 100%;
+        height: auto; /* Allow height adjustment */
+        margin-bottom: 20px;
+    }
+}
+
+/* Hover Effect */
+.step-icon:hover i {
+    color: #2ecc71; /* Slight color change on hover */
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* CTA Container for unified layout */
+.cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    background-color: #1e7d1e;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn i {
+    margin-right: 8px; /* Space between icon and text */
+    transform: scaleX(-1); /* Flip the icon horizontally */
+}
+
+.cta-btn:hover {
+    background-color: #50c878;
+}
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+    .step {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust to fit content */
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Contact Info Styling */
+.contact-info {
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #228B22; /* Matches the theme color */
+    margin-top: 10px;
+}
+
+/* Contact Info Icon Flipping */
+.contact-info i {
+    margin-right: 5px;
+    transform: scaleX(-1); /* Flip the icon horizontally */
+}
+
+.contact-info a {
+    color: #228B22; /* Link color for phone number */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #1e7d1e; /* Darker green on hover */
+}

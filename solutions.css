@@ -1,0 +1,92 @@
+/* Solutions & Key Benefits Section with Gradient Background */
+.solutions, .key-benefits {
+    background: #1E1D1D;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: visible;
+}
+
+/* Headers for Solutions and Key Benefits */
+.solutions h2, .key-benefits h3 {
+    font-size: 2.8em;
+    color: #228B22;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.solutions h2::after, .key-benefits h3::after {
+    content: '';
+    width: 120px;
+    height: 4px;
+    background-color: #228B22;
+    display: block;
+    margin: 15px auto;
+}
+
+/* Containers for Solutions and Key Benefits Cards */
+.solutions-container, .key-benefits-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 3vw;
+    flex-wrap: nowrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+/* Shared Card Styling */
+.solution, .benefit {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 23%;
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    overflow: visible; /* Allows hover effects without cut-off */
+}
+
+.solution:hover, .benefit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    z-index: 5;
+}
+
+/* Icon Styling */
+.solution i, .benefit i {
+    font-size: 3em;
+    color: #228B22;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.solution:hover i, .benefit:hover i {
+    color: #2ecc71;
+}
+
+/* Text Styling for Solution and Benefit Titles */
+.solution h3, .benefit h4 {
+    font-size: 1.6em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.solution p, .benefit p {
+    font-size: 1.1em;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .solutions-container, .key-benefits-container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}

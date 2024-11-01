@@ -1,0 +1,10 @@
+.fade-in {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Slightly smaller initial offset */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Faster and smoother */
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+}

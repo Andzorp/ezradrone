@@ -1,0 +1,178 @@
+/* Contact CTA Section */
+.contact-cta-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background-color: #1E1D1D;
+    gap: 40px;
+    position: relative;
+}
+
+.cta-image {
+    flex: 1.1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Gradient Overlay on Image */
+.cta-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+    border-radius: 10px;
+}
+
+/* Add Hover Effect to Image */
+.cta-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Text Container */
+.cta-content {
+    flex: 1;
+    color: #e8ffe8;
+    padding: 30px;
+    background-color: rgba(30, 30, 30, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    margin-left: 20px; /* Adds space to ensure no overlap with divider */
+    position: relative;
+    z-index: 2;
+    border: 2px solid #1e7d1e;
+}
+
+.cta-content h2 {
+    font-size: 2.4em;
+    color: #1e7d1e;
+    margin-bottom: 15px;
+}
+
+.cta-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+/* Button Styling */
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: #1e7d1e;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Styling */
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: #1e7d1e;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Center the Arrow */
+.cta-btn i {
+    margin-left: 8px;
+    font-size: 1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.cta-btn:hover {
+    background-color: #28a65b;
+    transform: translateY(-3px);
+}
+
+.cta-btn:hover i {
+    transform: translateX(4px); /* Moves the arrow slightly on hover */
+}
+
+
+/* Button Pulse Animation */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-cta-section {
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+
+    .cta-content,
+    .cta-image {
+        width: 100%;
+    }
+
+    .cta-content h2 {
+        font-size: 2em;
+    }
+
+    .cta-content p {
+        font-size: 1.1em;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Remove divider line on mobile */
+    .contact-cta-section::before {
+        display: none;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-cta-section {
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+
+    .cta-content,
+    .cta-image {
+        width: 100%;
+        margin-left: 0; /* Remove extra margin on mobile */
+    }
+
+    /* Remove divider line on mobile */
+    .contact-cta-section::before {
+        display: none;
+    }
+}

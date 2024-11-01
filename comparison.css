@@ -1,0 +1,176 @@
+.comparison-section {
+    padding: 50px 20px;
+    background-color: #1E1D1D;
+    color: #e8ffe8;
+    text-align: center;
+}
+
+.comparison-section h3 {
+    font-size: 2.5em;
+    color: #228B22;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.comparison-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.comparison-column {
+    flex: 1;
+    color: #e8e8e8; /* Light gray text for visibility */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+/* Specific Styles for Each Column */
+.comparison-column:first-child {
+    background-color: #1e1e1e; /* Dark charcoal gray */
+}
+
+.comparison-column:last-child {
+    background-color: #2a3d32; /* Deep muted green-gray */
+}
+
+.comparison-column:hover {
+    transform: translateY(-5px);
+}
+
+.comparison-column h4 {
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2ecc71;
+    padding-bottom: 10px;
+}
+
+/* Key Benefits List Styling */
+.comparison-column ul {
+    padding-left: 20px; /* Ensures padding for pseudo-element bullets */
+    color: #555;
+}
+
+.comparison-column ul li {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 1.1em;
+    color: #e0e0e0;
+    line-height: 1.5;
+    position: relative; /* Allows for absolute positioning of bullets */
+}
+
+.comparison-column ul li::before {
+    content: "•"; /* Custom bullet character */
+    color: #2ecc71; /* Theme color for bullet */
+    font-size: 1.2em; /* Adjust size to fit the text */
+    position: absolute;
+    left: -20px; /* Adjust spacing from text */
+    top: 50%;
+    transform: translateY(-50%); /* Centers the bullet vertically with the text */
+}
+
+.comparison-column ul li strong {
+    font-weight: bold;
+    color: #228B22; /* Use theme color for emphasis */
+}
+
+.comparison-column ul li i {
+    font-size: 1.5em;
+    color: #2ecc71;
+    margin-right: 15px;
+}
+
+.comparison-section .comparison-container::before {
+    content: "";
+    width: 2px;
+    height: calc(100% - 180px);
+    background: linear-gradient(to bottom, #f5f5f5 50%, #e8ffe8 50%); /* Gray to green */
+    position: absolute;
+    top: 125px;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.comparison-section .comparison-container::after {
+    content: "VS";
+    color: #333;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 4px 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .comparison-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comparison-column {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .comparison-section .comparison-container::after {
+        content: "VS";
+        color: #333;
+        font-weight: bold;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 4px 8px;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Responsive Stacking */
+@media (max-width: 768px) {
+    .comparison-container {
+        flex-direction: column;
+    }
+    .comparison-section .comparison-container::before {
+        display: none; /* Remove divider line on mobile */
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .comparison-column ul li {
+        padding-left: 20px; /* Reduce space on smaller screens */
+        font-size: 1em; /* Adjust text size */
+    }
+
+    .comparison-column ul li::before {
+        font-size: 1em; /* Adjust bullet size */
+        left: -15px; /* Closer to the text */
+    }
+}
+
+@media (max-width: 480px) {
+    .comparison-column ul li {
+        padding-left: 15px; /* Reduce further for very small screens */
+        font-size: 0.9em; /* Slightly smaller text size */
+    }
+
+    .comparison-column ul li::before {
+        font-size: 0.9em; /* Smaller bullet size */
+        left: -12px; /* Closer to text */
+    }
+}
+

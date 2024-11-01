@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Specifications</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-Photoroom.png" alt="AgriDrone Logo">
+                </a>
+            </div>
+            <ul class="desktop-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <span class="no-click">Drones</span>
+                    <ul class="dropdown">
+                        <!-- Navbar links now call selectDrone directly -->
+                        <li><a href="#" onclick="selectDrone('t25')">DJI Agras T25</a></li>
+                        <li><a href="#" onclick="selectDrone('t50')">DJI Agras T50</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <span class="no-click">Parts</span>
+                    <ul class="dropdown">
+                        <li><a href="drone1-specs.html">DJI Agras T25 Parts</a></li>
+                        <li><a href="drone1-parts.html">DJI Agras T50 Parts</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    
+    <nav class="menu" id="menu">
+        <div class="close-icon" id="closeIcon">X</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="has-dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle">Drones</a>
+                <ul class="dropdown-menu">
+                    <!-- Corrected links for the mobile menu as well -->
+                    <li><a href="t25dronepage.html">DJI Agras T25</a></li>
+                    <li><a href="t50dronepage.html">DJI Agras T50</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle">Parts</a>
+                <ul class="dropdown-menu">
+                    <li><a href="t25-parts.html">DJI Agras T25 Parts</a></li>
+                    <li><a href="t50-parts.html">DJI Agras T50 Parts</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <section class="product">
+        <div class="product-top">
+            <!-- Left Column: Drone Image -->
+            <div class="drone-image">
+                <img id="droneImage" src="images/agras-T50.png" alt="DJI AGRAS T50">
+            </div>
+    
+            <!-- Right Column: Drone Details with Toggle Feature -->
+            <div class="drone-details">
+                <!-- Drone Toggle Selector -->
+                <div class="product-selector">
+                    <!-- Toggle links now call selectDrone directly -->
+                    <a href="#" class="selector-link active" onclick="selectDrone('t25')">DJI Agras T25</a>
+                    <a href="#" class="selector-link" onclick="selectDrone('t50')">DJI Agras T50</a>
+                </div>
+                
+    
+                <!-- Drone Header and Description -->
+                <h2 id="droneTitle">DJI AGRAS T50</h2>
+                <p id="droneDescription">
+                    Advanced agricultural drone designed for precision spraying and efficient field management. Equipped with the latest technology for crop monitoring, pest control, and irrigation management.
+                </p>
+                <div class="action-buttons">
+                    <a href="contact.html" class="btn">Contact Us</a>
+                    <a href="accessories.html" class="btn">View Parts</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Full-Width Specifications Section -->
+        <div class="specs-section">
+            <h3>Specifications</h3>
+            <ul id="specsList">
+                <li>Flight Time: Up to 60 minutes</li>
+                <li>Battery Capacity: 12L</li>
+                <li>Max Speed: 15 m/s</li>
+                <li>Spray Width: 6 meters</li>
+                <li>Control Range: 5km</li>
+            </ul>
+        </div>
+    </section>
+    
+
+<script src="menu.js"></script>
+<script src="products.js"></script>
+
+</body>
+</html>

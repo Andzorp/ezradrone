@@ -1,0 +1,314 @@
+/* Products Page Styles */
+.product {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #e8ffe8;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10%;
+}
+
+/* Dedicated Container for Toggles */
+.product-selector {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.selector-link {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.selector-link.active {
+    border-bottom: 2px solid #2ecc71;
+}
+
+.selector-link:hover {
+    color: #50c878;
+}
+
+/* Top Section Layout */
+.product-top {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Left Column: Image with Fade Transition */
+.drone-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.drone-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    opacity: 1;
+}
+
+/* Right Column: Details with Fade Transition */
+.drone-details {
+    flex: 1;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.drone-details h2 {
+    font-size: 2em;
+    color: #2ecc71;
+    margin-bottom: 10px;
+}
+
+.drone-details p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.action-buttons .btn {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: transparent;
+    color: #2ecc71;
+    border: 2px solid #2ecc71;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-buttons .btn:hover {
+    background-color: #2ecc71;
+    color: #1f1f1f;
+}
+
+/* Specifications Section */
+.specs-section {
+    margin-top: 20px;
+}
+
+.specs-section h3 {
+    font-size: 1.8em;
+    color: #2ecc71;
+    margin-bottom: 10px;
+}
+
+.specs-section ul {
+    list-style: none;
+    padding: 0;
+    color: #cccccc;
+    font-size: 1.1em;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.specs-section li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-top {
+        flex-direction: column;
+        align-items: center;
+    }
+    .drone-details, .drone-image {
+        align-items: center;
+    }
+}
+
+.drone-image img,
+.drone-details,
+.specs-section {
+    transition: none; /* Disable all transitions */
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .product {
+        padding: 20px;
+        margin-top: 40%;
+    }
+
+    /* Stack Image and Details in a Column Layout */
+    .product-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .drone-image {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .drone-image img {
+        max-width: 80%; /* Adjust as needed */
+        height: auto;
+    }
+
+    .drone-details {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .product-selector {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust Toggle Links */
+    .product-selector .selector-link {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    /* Align Drone Title and Description */
+    #droneTitle {
+        font-size: 1.8em;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    #droneDescription {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    /* Specifications Section */
+    .specs-section {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .specs-section ul {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .specs-section li {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1208px) {
+    .product {
+        padding: 20px;
+        margin-top: 10%;
+    }
+
+    /* Stack Image and Details in a Column Layout */
+    .product-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .drone-image {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .drone-image img {
+        max-width: 80%; /* Adjust as needed */
+        height: auto;
+    }
+
+    .drone-details {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .product-selector {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust Toggle Links */
+    .product-selector .selector-link {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    /* Align Drone Title and Description */
+    #droneTitle {
+        font-size: 1.8em;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    #droneDescription {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    /* Specifications Section */
+    .specs-section {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .specs-section ul {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .specs-section li {
+        font-size: 1em;
+        padding: 10px;
+    }
+}

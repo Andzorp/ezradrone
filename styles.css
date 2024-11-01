@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0c0c0c;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, opacity 0.5s ease, visibility 0.5s ease;
+    backdrop-filter: blur(10px);
+}
+
+header.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Navbar Flexbox Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 140px;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
+}
+
+/* Desktop Menu */
+.desktop-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.desktop-menu > li {
+    position: relative;
+}
+
+/* Main Navigation Links and Non-clickable Span Styling */
+.desktop-menu > li > a,
+.desktop-menu > li > span.no-click {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    cursor: pointer; /* Shows hand cursor for span */
+}
+
+/* Hover effect and underline animation for both links and no-click spans */
+.desktop-menu > li > a:hover,
+.desktop-menu > li > span.no-click:hover {
+    color: #2ecc71;
+    transform: scale(1.05);
+}
+
+/* Underline Animation for Hover */
+.desktop-menu > li > a::after,
+.desktop-menu > li > span.no-click::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #2ecc71;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Extend underline from center on hover */
+.desktop-menu > li > a:hover::after,
+.desktop-menu > li > span.no-click:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Active Link Indicator */
+.desktop-menu > li > a.active,
+.desktop-menu > li > span.no-click.active {
+    color: #2ecc71;
+    border-bottom: 3px solid #2ecc71;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    padding: 10px 0;
+    list-style: none;
+    min-width: 160px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-menu > li:hover .dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown Link Styling */
+.dropdown li a {
+    color: #ffffff;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown li a:hover {
+    background-color: #228B22;
+    transform: translateX(5px);
+}
+
+/* Mobile Menu Icon Styling */
+.menu-icon {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 25px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 50;
+    padding-right: 0px; /* Ensure space on the right side */
+    transition: opacity 0.3s ease; /* Smooth fade-out */
+}
+
+.menu-icon.fade-out {
+    opacity: 0;
+    pointer-events: none; /* Prevent clicks when faded out */
+}
+
+/* Updated Close Icon Styling */
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em; /* Larger font size */
+    color: #e8ffe8; /* Soft white-green color */
+    cursor: pointer;
+    z-index: 20;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.close-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    color: #2ecc71; /* Change color on hover */
+}
+
+/* Show menu icon on mobile */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .menu-icon .line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        position: relative;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 50px 20px;
+    opacity: 0; /* Hidden initially */
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Slide and fade */
+    z-index: 15;
+}
+
+.menu.open {
+    right: 0; /* Slide in */
+    opacity: 1; /* Fade in */
+}
+
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 20px 0;
+}
+
+.menu ul li a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #2ecc71;
+}
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        z-index: 20; /* Ensures icon is on top of other elements */
+    }
+
+    .menu.open {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 50px 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 15; /* Menu should overlay content but stay under icon */
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu ul li {
+        margin: 20px 0;
+    }
+
+    .menu ul li a {
+        color: white;
+        font-size: 1.5em;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: color 0.3s ease;
+    }
+
+    .menu ul li a:hover {
+        color: #2ecc71;
+    }
+
+    /* Hide header when menu is open */
+    .hide-header {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+}
+
+/* Active Link Indicator */
+.desktop-menu > li > a.active,
+.desktop-menu > li > span.no-click.active {
+    color: #2ecc71;
+    border-bottom: 3px solid #2ecc71; /* Active link underline */
+}
+
+/* Dropdown Styling in Mobile Menu */
+.menu ul .dropdown {
+    display: none; /* Hide by default */
+    padding-left: 15px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background for dropdowns */
+    list-style-type: none;
+}
+
+.menu ul .has-dropdown a {
+    cursor: pointer; /* Make sections with dropdowns clickable */
+}
+
+/* Show dropdown when open */
+.menu ul .dropdown.open-dropdown {
+    display: block;
+}
+
+/* Mobile-specific dropdown styling */
+@media (max-width: 768px) {
+    .menu ul .dropdown-menu {
+        display: none; /* Hide by default */
+        padding-left: 15px;
+        background-color: rgba(255, 255, 255, 0.1); /* Slight background for dropdowns */
+        list-style-type: none;
+    }
+
+    /* Show dropdown menu when active */
+    .menu ul .dropdown-menu.show {
+        display: block;
+    }
+
+    /* Style for the dropdown toggle */
+    .menu ul .has-dropdown > .dropdown-toggle {
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+}
+
+/* General link styles for dropdown toggles */
+.menu ul .has-dropdown > .dropdown-toggle {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.menu ul .has-dropdown > .dropdown-toggle:hover {
+    color: #2ecc71; /* Change color on hover */
+}
+
+/* Mobile-specific styling */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hide-header {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    header {
+        background-color: rgba(0, 0, 0, 0.9); /* Ensure the background is opaque on mobile */
+        backdrop-filter: blur(5px); /* Slight blur for better readability */
+    }
+}
