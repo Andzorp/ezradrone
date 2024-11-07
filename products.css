@@ -1,0 +1,217 @@
+/* General Product Section Styling */
+.product {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #e8ffe8;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10%;
+}
+
+/* Layout for Image and Details */
+.product-top {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Image Column Styling */
+.product-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Details Column Styling */
+.product-details {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Toggle Instruction Styling */
+.toggle-instruction {
+    font-size: 1em;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+/* Product Selector Styling */
+.product-selector {
+    display: flex;
+    gap: 20px; /* Space between toggle links */
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Selector Link Styling */
+.selector-link {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent; /* Default state: no underline */
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.selector-link.active {
+    border-bottom: 2px solid #2ecc71; /* Underline for active state */
+    color: #2ecc71;
+}
+
+.selector-link:hover {
+    color: #50c878;
+    transform: scale(1.05);
+}
+
+/* Icon Styling */
+.toggle-icon {
+    margin-right: 8px;
+    font-size: 1.1em;
+    color: inherit;
+}
+
+/* Active Icon Color */
+.selector-link.active .toggle-icon {
+    color: #1f1f1f;
+}
+
+/* Header and Description */
+#droneTitle {
+    font-size: 2em;
+    color: #2ecc71;
+    margin-bottom: 10px;
+}
+
+#droneDescription {
+    font-size: 1.1em;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.action-buttons .btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #2ecc71;
+    border: 2px solid #2ecc71;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-buttons .btn:hover {
+    background-color: #2ecc71;
+    color: #1f1f1f;
+}
+
+/* Specifications Section */
+.specs-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #1e1d1d;
+    color: #e8ffe8;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.specs-section h3 {
+    font-size: 1.8em;
+    color: #2ecc71;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.specs-section ul {
+    list-style: none;
+    padding: 0;
+    color: #cccccc;
+    font-size: 1.1em;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.specs-section li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .product-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-image,
+    .product-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-selector {
+        justify-content: center;
+    }
+
+    .specs-section ul {
+        max-width: 100%;
+    }
+}
+
+/* Image Container Styling */
+.drone-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px; /* Set a fixed max width */
+    height: 400px; /* Set a fixed height for the container */
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Smooth transition for the container */
+}
+
+/* Image Load-in Animation */
+@keyframes imageLoadIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.1); /* Start slightly zoomed in */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Settle to normal size */
+    }
+}
+
+.drone-image img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: imageLoadIn 0.5s ease forwards; /* Apply the animation */
+}
+

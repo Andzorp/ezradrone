@@ -1,0 +1,429 @@
+/* How It Works Section */
+.how-it-works {
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1E1D1D;
+}
+
+/* Title Styling */
+.how-it-works h2 {
+    font-size: 2.8em;
+    color: #1e7d1e;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.how-it-works h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #1e7d1e;
+    display: block;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 90%;
+    max-width: 1600px;
+    height: 700px;
+    background-image: url('images/Picture1.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: flex-end; /* Align items to the bottom of the container */
+    padding: 0px; /* Adjust as needed */
+}
+
+/* Steps Container */
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; /* Align cards to the bottom of container */
+    width: 100%;
+    height: 100%; /* Take full height of the image container */
+}
+
+/* Step Card Styling */
+.step {
+    background: #1E1D1D;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Evenly space contents vertically */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px 15px; /* Consistent padding for uniform spacing */
+    overflow: hidden;
+    transform: translateY(50%); /* Start fully off-screen (below the background image) */
+    opacity: 1;
+    overflow: hidden; /* Ensures content within the card is also clipped */
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    position: relative;
+    align-self: flex-end; /* Align each card to the bottom of the steps container */
+    margin-bottom: 0; /* Remove any bottom margin to avoid gap */
+}
+
+/* Raised state to bring card fully into view */
+.step.active {
+    transform: translateY(0); /* Bring the card fully into view */
+}
+
+.step.all-raised {
+    transform: translateY(0); /* Keep all cards raised at the end */
+}
+
+/* Icon Styling */
+.step-icon {
+    font-size: 3em; /* Slightly smaller for balance */
+    color: #1e7d1e; /* Consistent green color */
+    margin-bottom: 15px; /* Slightly increased for better spacing */
+}
+
+/* Header Styling */
+.step h3 {
+    font-size: 1.4em;
+    color: #ffffff;
+    margin-bottom: 10%;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: auto; /* Align h3 to start at the same height in each card */
+}
+
+/* Paragraph Styling */
+.step p {
+    font-size: 1.1em;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 0; /* Remove excess margin for uniform spacing */
+    text-align: center; /* Center-align text for uniform look */
+    margin-top: auto; /* Align paragraph to bottom for even spacing */
+    margin-bottom: 20%;
+}
+
+/* General Centering for CTA Container */
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* CTA Button Styling */
+.cta-buttons {
+    position: absolute;
+    bottom: -50px; /* Start just below the image */
+    left: 50%;
+    transform: translateX(-50%) translateY(0); /* Center horizontally */
+    opacity: 0; /* Start invisible */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 1s ease, opacity 1s ease; /* Smooth rise and fade-in */
+}
+
+/* Raised state for final position */
+.cta-buttons.raised {
+    bottom: 50%; /* Move to center of image */
+    transform: translateX(-50%) translateY(50%); /* Center in image */
+    opacity: 1; /* Fade in */
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: #1E7D1E; /* Match card color */
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #50c878;
+    transform: translateY(-2px); /* Hover effect */
+}
+
+.cta-btn i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.cta-btn:hover i {
+    transform: translateX(4px);
+}
+
+
+/* Enhanced CTA Text Styling */
+.cta-text {
+    position: absolute;
+    bottom: -60px; /* Start below the visible area */
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    font-size: 3em; /* Larger font size */
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; /* Start invisible for animation */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 8px; /* Rounded corners */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8); /* Subtle shadow for better contrast */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.cta-text.raised {
+    bottom: 60%; /* Move to position above the buttons */
+    transform: translateX(-50%) translateY(50%);
+    opacity: 1; /* Fade in */
+}
+
+/* How It Works section specific fade-in and raise/lower */
+.how-it-works-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.how-it-works-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Final height variations */
+.step.final-height-1 {
+    transform: translateY(-50px); /* Slightly raised */
+}
+
+.step.final-height-2 {
+    transform: translateY(-30px); /* Raised a bit more */
+}
+
+.step.final-height-3 {
+    transform: translateY(-10px); /* Highest position */
+}
+
+.cta-buttons-mobile {
+    display: none;
+}
+
+.cta-text-mobile {
+    display: none;
+}
+
+/* Responsive adjustments */
+
+/* Large screens (1200px and below) */
+@media (max-width: 1200px) {
+    .step h3 {
+        font-size: 1.3em;
+    }
+
+    .step p {
+        font-size: 0.9em;
+    }
+
+    .cta-text {
+        font-size: 1.3em;
+        padding: 8px 15px;
+    }
+
+    .cta-buttons {
+        gap: 15px;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 1200) {
+    .steps-container {
+        flex-direction: row;
+        gap: 0px !important; /* Further reduce gap between cards */
+        padding: 0 30% !important; /* Narrower side padding */
+    }
+
+}
+
+/* Medium screens (tablets, 768px and below) */
+@media (max-width: 768px) {
+    .image-container {
+        width: 100%;
+        height: 900px; /* Increase height for more space */
+        padding: 0;
+    }
+
+    .steps-container {
+        flex-direction: column;
+        gap: 0px !important; /* Further reduce gap between cards */
+        padding: 0 10% !important; /* Narrower side padding */
+    }
+
+    .step {
+        width: 95%; /* Maximize width on small screens */
+        height: 200px; /* Allow height to adjust based on content */
+        padding: 10px;
+        margin-bottom: -1px !important;
+        margin-top: 2%;
+    }
+
+    .step-icon {
+        font-size: 2em; /* Scales down icon size */
+        margin-bottom: 8px; /* Adjust margin below icon */
+    }
+
+    .step h3 {
+        font-size: 1.2em; /* Smaller font size for headers */
+        margin: 6px 0; /* Adjust margin for compactness */
+    }
+
+    .step p {
+        font-size: 0.9em; /* Reduce paragraph font size */
+        line-height: 1.4; /* Adjust line height for readability */
+        margin: 6px 0; /* Adjust spacing around paragraph */
+    }
+
+    .cta-container {
+        order: 2; /* CTA below the image */
+        margin-top: 0; /* Reset margin-top */
+        padding: 20px 0; /* Small padding to separate from the next section */
+        text-align: center;
+    }
+
+    .cta-text {
+        display: none;
+    }
+
+    .how-it-works {
+        align-items: stretch; /* Full width on smaller screens */
+    }
+
+    .cta-buttons {
+        display: none;
+    }
+
+    .cta-btn {
+        display: none;
+    }
+
+    .cta-buttons-mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px; /* Space between buttons */
+        max-width: 100%;
+    }
+    
+    /* Button styling for mobile-only */
+    .cta-buttons-mobile a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px; /* Compact padding for a sleek look */
+        background-color: #228B22;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1em; /* Ensures readability while keeping text on one line */
+        font-weight: bold;
+        white-space: nowrap; /* Prevents text from wrapping */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        width: 100%; /* Full width on mobile */
+        max-width: 320px; /* Set max width to control button length */
+    }
+
+    .cta-text-mobile {
+        display: flex;
+        margin-bottom: 10px;
+        font-size: 1.3em; /* Larger font size */
+        color: #ffffff;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px 20px; /* Padding around the text */
+        border-radius: 8px; /* Rounded corners */
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8); /* Subtle shadow for better contrast */
+    }
+}
+
+/* Small screens (phones, 480px and below) */
+@media (max-width: 480px) {
+    .image-container {
+        height: auto;
+        padding: 0;
+    }
+
+    .step {
+        width: 100%;
+        padding: 8px; /* Smaller padding */
+        overflow: visible; /* Ensure full text visibility */
+        box-shadow: none; /* Simplify for mobile */
+    }
+
+    .step-icon {
+        font-size: 1.8em; /* Further reduce icon size */
+        margin-bottom: 6px;
+    }
+
+    .step h3 {
+        font-size: 1.2em; /* Smaller header font size */
+        margin: 4px 0; /* Minimize margin for tight fit */
+    }
+
+    .step p {
+        font-size: 1em; /* Smaller paragraph text for readability */
+        line-height: 1.3; /* Adjust line height */
+        margin: 4px 0; /* Compact spacing for paragraphs */
+    }
+
+    /* Move CTA container below card section */
+    .cta-container {
+        margin-top: 30px; /* Adds space between cards and CTA */
+    }
+
+    .steps-container {
+        gap: 4px !important; /* Minimal gap for compact layout */
+        padding: 0 5px !important; /* Minimal padding on smallest screens */
+    }
+
+    .step {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px !important;
+    }
+
+    .cta-text {
+        display: none;
+    }
+
+    .cta-buttons {
+        display: none;
+    }
+
+    .cta-btn {
+        padding: 6px 8px;
+        font-size: 0.75em;
+        width: 100%;
+    }
+}

@@ -1,0 +1,132 @@
+
+/* Drones Overview Section */
+.drones-overview {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.drones-overview h1 {
+    font-size: 2.5em;
+    color: #1e7d1e;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Drone Card Layout */
+.drone-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #272525;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.drone-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.drone-info {
+    flex: 1;
+    text-align: left;
+}
+
+.drone-info h2 {
+    font-size: 1.8em;
+    color: #1e7d1e;
+    margin-bottom: 10px;
+}
+
+.drone-info p {
+    font-size: 1.2em;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+.features-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.features-list li {
+    font-size: 1.1em;
+    color: #dddddd;
+    margin-bottom: 5px;
+}
+
+/* View Details Button */
+.view-details-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 10px;
+    background-color: #1e7d1e;
+    color: #1f1f1f;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    /* Adjust layout to stack items vertically */
+    .drone-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Center-align text in .drone-info on mobile */
+    .drone-info {
+        text-align: center;
+    }
+
+    /* Full-width image on mobile */
+    .drone-image img {
+        max-width: 100%;
+        margin-bottom: 15px; /* Space between image and info */
+    }
+
+    /* Adjust font sizes for smaller screens */
+    .drones-overview h1 {
+        font-size: 2em;
+    }
+
+    .drone-info h2 {
+        font-size: 1.6em;
+    }
+
+    .drone-info p {
+        font-size: 1.1em;
+    }
+
+    .features-list li {
+        font-size: 1em;
+    }
+
+    /* Adjust button to fit better on mobile */
+    .view-details-btn {
+        width: 100%; /* Full width on mobile */
+        max-width: 200px; /* Limit max width */
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .drones-overview {
+        margin-top: 25%;
+    }
+}

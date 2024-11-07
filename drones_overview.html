@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Maple Park AgriDrones</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="drones_overview.css">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <!-- Overlay container for logo and hamburger menu icon -->
+            <div class="overlay-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo-Photoroom.png" alt="AgriDrone Logo">
+                    </a>
+                </div>
+                <!-- Hamburger Menu Icon, moved to the right -->
+                <div id="menuIcon" class="menu-icon">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+    
+            <!-- Desktop Menu - Hidden on Mobile -->
+            <ul class="desktop-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <span class="no-click">Drones</span>
+                    <ul class="dropdown">
+                        <li><a href="drone.html?drone=t25">DJI Agras T25</a></li>
+                        <li><a href="drone.html?drone=t50">DJI Agras T50</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <span class="no-click">Parts</span>
+                    <ul class="dropdown">
+                        <li><a href="drone1-specs.html">DJI Agras T25 Parts</a></li>
+                        <li><a href="drone1-parts.html">DJI Agras T50 Parts</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Structure - Positioned outside the header -->
+    <nav class="menu" id="menu">
+        <div class="close-icon" id="closeIcon">X</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="has-dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle">Drones</a>
+                <ul class="dropdown-menu">
+                    <li><a href="drone.html?drone=t25">DJI Agras T25</a></li>
+                    <li><a href="drone.html?drone=t50">DJI Agras T50</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle">Parts</a>
+                <ul class="dropdown-menu">
+                    <li><a href="t25-parts.html">DJI Agras T25 Parts</a></li>
+                    <li><a href="t50-parts.html">DJI Agras T50 Parts</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <section class="drones-overview">
+        <h1>Explore Our Drones</h1>
+        <div class="drone-card">
+            <div class="drone-image">
+                <img src="images/file (10).png" alt="DJI AGRAS T25">
+            </div>
+            <div class="drone-info">
+                <h2>DJI AGRAS T25</h2>
+                <p>A highly efficient drone optimized for agricultural applications, providing precision and sustainability.</p>
+                <ul class="features-list">
+                    <li>Flight Time: Up to 45 minutes</li>
+                    <li>Battery Capacity: 10L</li>
+                    <li>Max Speed: 12 m/s</li>
+                    <li>Spray Width: 5 meters</li>
+                </ul>
+                <a href="drone.html?drone=t25" class="view-details-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="drone-card">
+            <div class="drone-image">
+                <img src="images/agras-T50.png" alt="DJI AGRAS T50">
+            </div>
+            <div class="drone-info">
+                <h2>DJI AGRAS T50</h2>
+                <p>Advanced agricultural drone designed for precision spraying and efficient field management.</p>
+                <ul class="features-list">
+                    <li>Flight Time: Up to 60 minutes</li>
+                    <li>Battery Capacity: 12L</li>
+                    <li>Max Speed: 15 m/s</li>
+                    <li>Spray Width: 6 meters</li>
+                </ul>
+                <a href="drone.html?drone=t50" class="view-details-btn">View Details</a>
+            </div>
+        </div>
+    </section> 
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>info@agridrone.com<br>+1 234 567 890</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AgriDrone Solutions</p>
+            <p><a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="menu.js"></script>
+<script src="form-interactive.js"></script>
+<script src="form-validation.js"></script>
+<script src="products.js"></script>
+
+</body>
+</html>

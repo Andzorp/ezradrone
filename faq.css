@@ -1,0 +1,99 @@
+/* FAQ Section */
+.faq-section {
+    background-color: #1E1D1D;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.faq-section h3 {
+    font-size: 2em;
+    color: #228B22;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.faq-section h3::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #228B22;
+    display: block;
+    margin: 10px auto;
+}
+
+/* FAQ Container - Two-column layout for larger screens */
+.faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    gap: 16px; /* Space between items */
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Single column on mobile screens */
+@media (max-width: 768px) {
+    .faq-container {
+        grid-template-columns: 1fr; /* Stack items in one column */
+        gap: 10px; /* Reduced gap */
+    }
+}
+
+/* FAQ Item Styling */
+.faq-item {
+    background-color: #1f1f1f;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: #228B22 2px solid;
+}
+
+.faq-item:hover {
+    background-color: #2b2b2b;
+}
+
+.faq-item h4 {
+    font-size: 1.2em;
+    color: #228B22;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item p {
+    font-size: 1em;
+    color: #cccccc;
+    line-height: 1.5;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    visibility: hidden;
+    margin-top: 5px;
+}
+
+/* Toggle open class for FAQ Item */
+.faq-item.open p {
+    max-height: 100px;
+    visibility: visible;
+    padding-top: 5px;
+}
+
+/* Icon for expand/collapse */
+.faq-item h4::after {
+    content: '+';
+    color: #228B22;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open h4::after {
+    content: '-';
+    transform: rotate(180deg);
+}

@@ -1,0 +1,283 @@
+/* Drone Info Container - Updated for Side-by-Side Layout */
+.drone-info {
+    display: flex;
+    flex-direction: row; /* Arrange items side-by-side */
+    align-items: center;
+    justify-content: space-between;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: left;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+}
+
+.drone-info.open {
+    max-height: 600px;
+    opacity: 1;
+    padding: 15px;
+}
+
+/* Styling for a Larger Image on Left */
+.drone-info img {
+    width: 100%; /* Increased width for a larger image */
+    max-width: 800px; /* Set a max width to prevent it from being too large on bigger screens */
+    border-radius: 8px;
+    margin-right: 25px;
+}
+
+/* Content on Right */
+.drone-info .features-content {
+    width: 55%; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+}
+
+/* General Container Styling */
+.drone-cards {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1E1D1D;
+    font-family: 'Poppins', sans-serif;
+}
+
+.drone-cards h2 {
+    font-size: 2.8em;
+    color: #1e7d1e;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.drone-cards h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #1e7d1e;
+    display: block;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* Main Container Styling */
+.drone-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Left Column Styling */
+.drone-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #1E1E1E;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease;
+}
+
+.drone-item {
+    padding: 15px 20px;
+    background-color: #272727;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.drone-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #303030;
+}
+
+/* Drone Title Styling */
+.drone-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #1e7d1e;
+    font-size: 1.6em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.drone-header h3 {
+    color: inherit; /* Use the color set in .drone-header */
+    margin: 0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #1e7d1e;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+    color: #28a745;
+}
+
+/* Features List Styling */
+.features-list {
+    list-style: none;
+    padding: 0;
+    color: #dddddd;
+    margin-bottom: 15px;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.features-list i {
+    margin-right: 8px;
+    color: #228B22;
+}
+
+/* Right Column Styling */
+.drone-display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #272727;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.drone-display:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Active Drone Name Styling */
+#active-drone-name {
+    font-size: 1.8em;
+    color: #2ECC71;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.drone-display img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.drone-display img:hover {
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+.info-btn {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: #228B22;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.info-btn:hover {
+    background-color: #006400;
+}
+
+/* Responsive Design - Mobile View Adjustments */
+@media (max-width: 768px) {
+    .drone-container {
+        flex-direction: column;
+    }
+
+    /* Make each drone item expand to show features and info button */
+    .drone-info {
+        display: flex;
+        flex-direction: column;
+        max-height: none; /* Remove height restriction for mobile */
+        opacity: 1;
+        padding: 15px; /* Add padding for mobile view */
+        background-color: #1f1f1f;
+        border-radius: 8px;
+    }
+
+    /* Adjustments for features list and info button */
+    .features-list {
+        display: block; /* Make features list visible on mobile */
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    .info-btn {
+        display: block;
+        width: 100%; /* Full width button for mobile */
+        text-align: center;
+        padding: 10px;
+        font-size: 1em;
+        background-color: #228B22;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    /* Center image and adjust size for mobile */
+    .drone-info img {
+        max-width: 90%; /* Limit image width on mobile */
+        width: auto; /* Allow image to scale naturally */
+        margin: 0 auto; /* Center image */
+        display: block; /* Ensure centering */
+    }
+}
+
+/* Default styles for larger screens - keep info collapsed */
+.drone-info {
+    display: none;
+}
+
+.drone-info.open {
+    display: flex; /* Enable info to toggle open/close */
+    max-height: 600px;
+}
+
+
+.drone-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease; /* Smooth height transition */
+}
+
+.drone-info.open {
+    max-height: 500px; /* Adjust this height to fit your content */
+}

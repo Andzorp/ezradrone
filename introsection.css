@@ -1,0 +1,260 @@
+/* Updated Styling for About the Company Section */
+.intro-section {
+    background: #1E1D1D;
+    padding: 80px 20px;
+    text-align: center;
+    border-top: 2px solid #228B22;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: rgba(39, 37, 37, 0.85);
+    border-radius: 10px;
+    border: 2px solid #1e7d1e;
+}
+
+.intro-icon {
+    font-size: 3em;
+    color: #228B22;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.intro-section h2 {
+    font-size: 2.8em;
+    color: #1e7d1e;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.intro-section h2::after {
+    content: '';
+    width: 120px;
+    height: 4px;
+    background-color: #1e7d1e;
+    margin: 15px auto 0;
+    display: block;
+}
+
+.intro-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #dddddd;
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+/* Updated Button Group */
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.intro-btn {
+    padding: 12px 28px;
+    font-weight: bold;
+    border: 2px solid #228B22;
+    border-radius: 8px;
+    background-color: #228B22;
+    color: #e8ffe8;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.intro-btn:hover {
+    background-color: #228B22;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.intro-btn.secondary {
+    border-color: #228B22;
+    color: #ffffff;
+}
+
+.intro-btn:hover {
+    background-color: #228B22;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade-in Down Animation for Heading and Icon */
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .intro-section h2 {
+        font-size: 2.2em;
+    }
+
+    .intro-section p {
+        font-size: 1.1em;
+    }
+
+    .intro-icon {
+        font-size: 2.5em;
+    }
+}
+
+/* Intro Section Logo Styling */
+.intro-icon img {
+    width: 280px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: -30px;
+    margin-top: -30px;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4)); /* Subtle shadow effect */
+    animation: fadeInDown 1s ease forwards; /* Animates logo into view */
+}
+
+/* Carousel Container */
+.carousel-container {
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 40px;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Slide Wrapper */
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 30px;
+}
+
+/* Individual Card Styling */
+.carousel-card {
+    background-color: #272525;
+    color: #e8ffe8;
+    width: 700px;
+    height: 400px;
+    padding: 0;
+    margin: 0 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    flex: none;
+    display: flex;
+    overflow: hidden;
+}
+
+/* Image and Text Containers within Each Card */
+.carousel-image {
+    flex: 1;
+    min-width: 50%;
+    background-color: #1E1D1D;
+    overflow: hidden;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-text {
+    flex: 1;
+    padding: 30px;
+    text-align: left;
+}
+
+.carousel-text h4 {
+    font-size: 1.7em;
+    color: #1e7d1e;
+    margin-bottom: 15px;
+}
+
+.carousel-text p {
+    font-size: 1.2em;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+/* Navigation Dots Styling */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #666;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-dot.active {
+    background-color: #1e7d1e;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-card {
+        width: 95%;
+        height: auto;
+        margin: 20px auto;
+        flex-direction: column;
+    }
+    .carousel-image,
+    .carousel-text {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-arrow {
+        display: none;
+    }
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #1e7d1e; /* Match the color theme */
+    border: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 10;
+    transition: background-color 0.3s, transform 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+}
+
+.carousel-arrow:hover {
+    background-color: #228B22; /* Slightly darker green */
+    color: #ffffff;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+

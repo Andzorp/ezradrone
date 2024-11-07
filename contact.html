@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Maple Park AgriDrones</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <!-- Overlay container for logo and hamburger menu icon -->
+            <div class="overlay-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo-Photoroom.png" alt="AgriDrone Logo">
+                    </a>
+                </div>
+                <!-- Hamburger Menu Icon, moved to the right -->
+                <div id="menuIcon" class="menu-icon">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+    
+            <!-- Desktop Menu - Hidden on Mobile -->
+            <ul class="desktop-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <span class="no-click">Drones</span>
+                    <ul class="dropdown">
+                        <li><a href="drone.html?drone=t25">DJI Agras T25</a></li>
+                        <li><a href="drone.html?drone=t50">DJI Agras T50</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <span class="no-click">Parts</span>
+                    <ul class="dropdown">
+                        <li><a href="drone1-specs.html">DJI Agras T25 Parts</a></li>
+                        <li><a href="drone1-parts.html">DJI Agras T50 Parts</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Structure - Positioned outside the header -->
+    <nav class="menu" id="menu">
+        <div class="close-icon" id="closeIcon">X</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="has-dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle">Drones</a>
+                <ul class="dropdown-menu">
+                    <li><a href="drone.html?drone=t25">DJI Agras T25</a></li>
+                    <li><a href="drone.html?drone=t50">DJI Agras T50</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle">Parts</a>
+                <ul class="dropdown-menu">
+                    <li><a href="t25-parts.html">DJI Agras T25 Parts</a></li>
+                    <li><a href="t50-parts.html">DJI Agras T50 Parts</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-form-section">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to learn more about our services? Fill out the form below, and our team will be in touch shortly.</p>
+    
+        <!-- Form setup for Netlify -->
+        <form method="POST" class="contact-form" netlify netlify-honeypot="bot-field" data-netlify="true" onSubmit="submit">
+            <!-- Hidden Netlify form field for form name -->
+            <input type="hidden" name="form-name" value="contact-form">
+            
+            <!-- Hidden redirect field to a thank you page after submission -->
+            <input type="hidden" name="redirect" value="/thankyou.html">
+            
+            <!-- Hidden honeypot field for spam protection -->
+            <p class="honeypot" style="display: none;">
+                <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+            </p>
+        
+            <!-- Contact Information -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="farm-size">Field Size</label>
+                    <select id="farm-size" name="farm-size">
+                        <option value="small">Small (&lt;50 acres)</option>
+                        <option value="medium">Medium (50-200 acres)</option>
+                        <option value="large">Large (&gt;200 acres)</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="start-date">Preferred Start Date</label>
+                <input type="date" id="start-date" name="start-date">
+            </div>
+    
+            <!-- Additional Information -->
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Additional details or specific requirements"></textarea>
+            </div>
+    
+            <!-- Submit Button -->
+            <button type="submit" class="cta-btn"><i class="fas fa-paper-plane"></i> Submit</button>
+        </form>
+    </section>    
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>info@agridrone.com<br>+1 234 567 890</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AgriDrone Solutions</p>
+            <p><a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="menu.js"></script>
+<script src="form-interactive.js"></script>
+<script src="form-validation.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* Contact Form Section with Dark Theme */
+.contact-form-section {
+    max-width: 800px;
+    margin: 180px auto;
+    padding: 40px 20px;
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 10%;
+}
+
+/* Two-column layout for form rows */
+.form-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.form-row .form-group {
+    flex: 1; /* Take up equal space */
+}
+
+/* General styling for form fields */
+.form-group label {
+    display: block;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #272727;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* CTA Button styling */
+.cta-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #228B22;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-btn:hover {
+    background-color: #1e7d1e;
+    transform: translateY(-3px);
+}
+
+
+/* Contact Form Page H2 Styling */
+.contact-form-section h2 {
+    font-size: 2.5em;
+    color: #ffffff; /* Bright color to contrast against dark background */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Slight spacing for a modern look */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+}
+
+/* Underline Styling for H2 */
+.contact-form-section h2::after {
+    content: '';
+    width: 200px;
+    height: 4px;
+    background-color: #228B22;
+    display: block;
+    margin: 20px auto; /* Center the underline */
+    border-radius: 2px; /* Add slight rounding to the underline */
+}
+
+
+/* Styling for introductory paragraph on the Contact Form Page */
+.contact-form-section p {
+    font-size: 1.1em;
+    color: #d1d1d1; /* Light gray for readability on dark background */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 700px; /* Limit width for readability */
+    margin-left: auto;
+    margin-right: auto; /* Center-align within the section */
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle background highlight */
+    border-left: 4px solid #228B22; /* Add a green accent border on the left */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for subtle depth */
+}
+
+/* Label Styling */
+.contact-form-section label {
+    font-size: 1.1em;
+    color: #cccccc; /* Soft contrast against dark background */
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px; /* Space between label and input */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Consistent letter spacing for modern look */
+}
+
+/* Additional Padding and Alignment for Form Fields */
+.contact-form-section .form-group {
+    margin-bottom: 20px; /* Space between form groups */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-form-section {
+        padding: 20px 15px;
+    }
+
+    /* Stack form fields in a single column */
+    .form-row {
+        flex-direction: column;
+    }
+
+    /* Adjust font size and layout for headers */
+    .contact-form-section h2 {
+        font-size: 2em;
+    }
+
+    .contact-form-section p {
+        font-size: 1em;
+        padding: 8px 12px;
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 1em;
+        margin-bottom: 4px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    /* Full-width button for mobile */
+    .cta-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .contact-form-section {
+        margin-top: 25%;
+    }
+}
+
+.honeypot {
+    display: none; /* Completely hides the honeypot field */
+}

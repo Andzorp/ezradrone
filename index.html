@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maple Park AgriDrones</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dronecards.css">
+    <link rel="stylesheet" href="introsection.css">
+    <link rel="stylesheet" href="solutions.css">
+    <link rel="stylesheet" href="how_it_works.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="fade-in.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="comparison.css">
+    <link rel="stylesheet" href="contact-cta.css">
+    <link rel="stylesheet" href="faq.css">
+    <!-- For .png format -->
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Arial:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <!-- Overlay container for logo and hamburger menu icon -->
+            <div class="overlay-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo-Photoroom.png" alt="AgriDrone Logo">
+                    </a>
+                </div>
+                <!-- Hamburger Menu Icon, moved to the right -->
+                <div id="menuIcon" class="menu-icon">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+    
+            <!-- Desktop Menu - Hidden on Mobile -->
+            <ul class="desktop-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li class="has-dropdown">
+                    <span class="no-click">Drones</span>
+                    <ul class="dropdown">
+                        <li><a href="drone.html?drone=t25">DJI Agras T25</a></li>
+                        <li><a href="drone.html?drone=t50">DJI Agras T50</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <span class="no-click">Parts</span>
+                    <ul class="dropdown">
+                        <li><a href="drone1-specs.html">DJI Agras T25 Parts</a></li>
+                        <li><a href="drone1-parts.html">DJI Agras T50 Parts</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Structure - Positioned outside the header -->
+    <nav class="menu" id="menu">
+        <div class="close-icon" id="closeIcon">X</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="has-dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle">Drones</a>
+                <ul class="dropdown-menu">
+                    <li><a href="drone.html?drone=t25">DJI Agras T25</a></li>
+                    <li><a href="drone.html?drone=t50">DJI Agras T50</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle">Parts</a>
+                <ul class="dropdown-menu">
+                    <li><a href="t25-parts.html">DJI Agras T25 Parts</a></li>
+                    <li><a href="t50-parts.html">DJI Agras T50 Parts</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+              
+
+<section class="hero fade-in">
+    <video autoplay muted playsinline loop class="hero-video">
+        <source src="images/IMG_3020.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Revolutionizing Agriculture<br> with Drone Technology</h1>
+        <p>Precision farming made simple and efficient.</p>
+        <div class="hero-btn-group">
+            <a href="drones_overview.html" class="hero-btn">Explore Products</a>
+            <a href="contact.html" class="hero-btn secondary">Contact Us</a>
+        </div>        
+    </div>
+    <div class="scroll-down">
+        <span></span>
+    </div>
+</section>
+
+<section class="intro-section fade-in">
+    <div class="container">
+        <div class="intro-icon">
+            <img src="images/logo-Photoroom.png" alt="AgriDrone Logo">
+        </div>
+        <h2>About Maple Park AgriDrones</h2>
+        <p>
+            At Maple Park AgriDrones, we're dedicated to advancing agriculture with cutting-edge drone technology. Our commitment is to enhance farming efficiency, precision, and sustainability, empowering farmers to maximize yields while preserving resources.
+        </p>
+        <p>
+            We deliver solutions tailored to meet modern agricultural challenges, offering tools that streamline processes from crop monitoring to pest management. Whether it’s optimizing field conditions or ensuring timely interventions, Maple Park AgriDrones is here to support smarter, more sustainable farming practices.
+        </p>
+        <div class="button-group">
+            <!-- Buttons here if needed -->
+        </div>
+
+        <!-- New Carousel Container -->
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <div class="carousel-card">
+                    <div class="carousel-image">
+                        <img src="images/carousel1.jpg" alt="Efficiency">
+                    </div>
+                    <div class="carousel-text">
+                        <h4>Enhanced Efficiency</h4>
+                        <p>Experience advanced precision agriculture with our drones, designed to apply fertilizers and pesticides only where needed. This reduces waste, increases crop yield, and improves overall sustainability.</p>
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-image">
+                        <img src="images/carousel2.jpg" alt="Precision">
+                    </div>
+                    <div class="carousel-text">
+                        <h4>Precision Agriculture</h4>
+                        <p>With our drones' real-time monitoring capabilities, farmers can receive up-to-date crop health data and soil quality reports, enabling them to make swift, informed decisions for optimal harvests.</p>
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-image">
+                        <img src="images/carousel3.jpg" alt="Sustainable">
+                    </div>
+                    <div class="carousel-text">
+                        <h4>Sustainable Practices</h4>
+                        <p>Designed for eco-conscious farming, our drones help reduce soil compaction, minimize chemical use, and cut down water wastage, making modern agriculture kinder to the planet.
+                        </p></p>
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-image">
+                        <img src="images/carousel4.jpg" alt="Sustainable">
+                    </div>
+                    <div class="carousel-text">
+                        <h4>Sustainable Practices</h4>
+                        <p>Designed for eco-conscious farming, our drones help reduce soil compaction, minimize chemical use, and cut down water wastage, making modern agriculture kinder to the planet.
+                        </p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="drone-cards fade-in">
+    <h2>Explore Our Drones</h2>
+    <div class="drone-container">
+        <div class="drone-list">
+            <div class="drone-item">
+                <div class="drone-header">
+                    <h3>DJI AGRAS T25</h3>
+                    <button class="toggle-btn">+</button>
+                </div>
+                <div class="drone-info">
+                    <img src="images/file (10).png" alt="DJI AGRAS T25">
+                    <div class="features-content">
+                        <ul class="features-list">
+                            <li><i class="fa fa-check"></i> High Efficiency</li>
+                            <li><i class="fa fa-leaf"></i> Eco-Friendly</li>
+                            <li><i class="fa fa-tachometer-alt"></i> 12L Capacity</li>
+                            <li><i class="fa fa-clock"></i> 60 min Flight Time</li>
+                        </ul>
+                        <a href="drone.html?drone=t25" class="info-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="drone-item">
+                <div class="drone-header">
+                    <h3>DJI AGRAS T50</h3>
+                    <button class="toggle-btn">+</button>
+                </div>
+                <div class="drone-info">
+                    <img src="images/agras-T50.png" alt="DJI AGRAS T50">
+                    <div class="features-content">
+                        <ul class="features-list">
+                            <li><i class="fa fa-check"></i> High Efficiency</li>
+                            <li><i class="fa fa-leaf"></i> Eco-Friendly</li>
+                            <li><i class="fa fa-tachometer-alt"></i> 12L Capacity</li>
+                            <li><i class="fa fa-clock"></i> 60 min Flight Time</li>
+                        </ul>
+                        <!-- Example View More button with query parameter for T50 -->
+                        <a href="drone.html?drone=t50" class="info-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works fade-in">
+    <h2>How It Works</h2>
+    <div class="image-container">
+        <div class="steps-container">
+            <!-- Each step card uses the new .how-it-works-card class -->
+            <div class="step how-it-works-card">
+                <div class="step-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Sales</h3>
+                <p>We’ll work with you to understand what your operation requires and what solution best works for you.</p>
+            </div>
+            <div class="step how-it-works-card">
+                <div class="step-icon"><i class="fas fa-headset"></i></div>
+                <h3>Support</h3>
+                <p>Once your drone is delivered, we’ll provide thorough training and our experience to make your operation more efficient.</p>
+            </div>
+            <div class="step how-it-works-card">
+                <div class="step-icon"><i class="fas fa-tools"></i></div>
+                <h3>Service</h3>
+                <p>From customer support to in-stock replacement parts we’ll help keep your operation moving.</p>
+            </div>
+        </div>
+    </div>
+    <div class="cta-container">
+        <div class="cta-text">Ready to Take the Next Step?</div>
+        <div class="cta-buttons">
+            <a href="contact.html" class="cta-btn">Contact Us</a>
+            <a href="tel:+1234567890" class="cta-btn">
+                <i class="fas fa-phone"></i> +1 234 567 890
+            </a>
+        </div>
+        <div class="cta-text-mobile">Ready to Take the Next Step?</div>
+        <div class="cta-buttons-mobile">
+            <a href="contact.html" class="cta-btn">Contact Us</a>
+            <a href="tel:+1234567890" class="cta-btn">
+                <i class="fas fa-phone"></i> +1 234 567 890
+            </a>
+        </div>
+    </div>
+
+</section>
+<!-- Video Section (3/4 width)
+<section class="contact-cta-section fade-in">
+    <div class="cta-video">
+        <video autoplay muted loop playsinline>
+            <source src="images/Media1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <div class="cta-content">
+        <h3>Take Your Farm to the Next Level</h3>
+        <p>Discover how our technology can enhance your yield and sustainability.</p>
+        <a href="contact.html" class="cta-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+-->
+<section class="faq-section fade-in">
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-container">
+        <div class="faq-item">
+            <h4>What are the benefits of using agricultural drones?</h4>
+            <p>Drones provide real-time data, improve efficiency, reduce labor costs, and allow for precise application of fertilizers and pesticides.</p>
+        </div>
+        <div class="faq-item">
+            <h4>How does drone technology help in crop monitoring?</h4>
+            <p>Our drones capture high-resolution images and data, helping farmers monitor crop health, detect diseases early, and optimize irrigation.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Are AgriDrone solutions environmentally friendly?</h4>
+            <p>Yes, AgriDrone solutions reduce the need for excessive pesticide and fertilizer use, which benefits both crops and the environment.</p>
+        </div>
+        <div class="faq-item">
+            <h4>What makes Maple Park AgriDrones different from other agricultural drones?</h4>
+            <p>Our drones are designed with eco-conscious farming in mind, offering targeted applications that minimize waste and increase efficiency.</p>
+        </div>
+        <div class="faq-item">
+            <h4>What support is provided after purchase?</h4>
+            <p>We provide comprehensive support, including training, customer service, and maintenance to ensure your operation runs smoothly.</p>
+        </div>
+        <div class="faq-item">
+            <h4>How safe is it to use AgriDrone solutions?</h4>
+            <p>Our drones adhere to high safety standards, reducing human exposure to chemicals and enhancing safety on the farm.</p>
+        </div>
+    </div>
+</section>
+
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>info@agridrone.com<br>+1 234 567 890</p> <!-- Streamlined contact info -->
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AgriDrone Solutions</p> <!-- Shortened copyright text -->
+            <p><a href="#">Privacy Policy</a></p> <!-- Removed terms link to keep minimal -->
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div> <!-- Removed Twitter for a cleaner layout -->
+        </div>
+    </div>
+</footer>
+
+<script src="menu.js"></script>
+<script src="carousel.js"></script>
+<script src="cards.js"></script>
+<script src="no_click.js"></script>
+<script src="fade-in.js"></script>
+<script src="faq.js"></script>
+<script src="how_it_works.js"></script>
+
+</body>
+</html>
